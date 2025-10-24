@@ -1,0 +1,23 @@
+import java.util.Scanner;
+        //Check even odd number number
+public class java1 {
+    public static void main(String[] args){
+        Scanner input = new Scanner(System.in);
+        int number;
+
+        System.out.print("Enter a Integer number: ");
+        number = input.nextInt();
+
+
+        if (number==0){
+            System.out.println("The number is Zero!");
+        }else if (number % 2 ==0){
+            System.out.printf("The number %d is Even number!\n", number);
+        }else {
+            System.out.printf("The number %d is Odd number!\n", number);
+        }
+
+        input.close();
+
+    }
+}
