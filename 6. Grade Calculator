@@ -1,0 +1,31 @@
+import java.util.Scanner;
+public class java6 {
+    public static void main(String[] args){
+        Scanner input = new Scanner(System.in);
+        int marks;
+
+        System.out.print("Enter your marks: ");
+        marks = input.nextInt();
+
+        if(marks > 100){
+            System.out.println("You haven't input valid number");
+
+        } else if (marks >= 90) {
+            System.out.println("Grade: A+");
+        } else if (marks >= 80) {
+            System.out.println("Grade: A");
+        } else if (marks >= 70) {
+            System.out.println("Grade: B");
+        }else if (marks >= 60){
+            System.out.println("Grade: C");
+        } else if (marks >= 50) {
+            System.out.println("Grade: D");
+        }else if (marks >= 0){
+            System.out.println("Grade: F");
+        }else {
+            System.out.println("This is not a valid number!");
+        }
+
+        input.close();
+    }
+}
