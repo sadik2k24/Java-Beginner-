@@ -1,0 +1,39 @@
+/*
+Slab No	Units Covered	Rate (Taka/unit)
+1	1 – 100	9
+2	101 – 250	12
+3	251 – 500	15
+4	501 and above	20
+
+*/
+
+
+import java.util.Scanner;
+
+public class java13 {
+    public static void main (String[] args){
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter units Consumed: ");
+        double units = scanner.nextDouble();
+
+        if (units <0){
+            System.out.println("Invalid input!");
+            return;
+        }
+        double bill = 0;
+
+        if (units <=100){
+            bill = units*9;
+        }else if (units <= 250){
+            bill = 100 * 9 + (units-100) * 12;
+        }else if (units <= 500){
+            bill = 100 * 9 + 150 * 12 + (units-250)*15;
+        }else{
+            bill = 100 * 9 + 250 * 12 + 500 * 15 + (units-500)*20;
+        }
+        System.out.println("Total Electricity Bill: "+ bill);
+
+        scanner.close();
+    }
+}
